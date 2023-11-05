@@ -92,3 +92,10 @@ function executeActions(actionsString) {
   }
 
 ///////////////////////////////////
+
+function createTrigger() {
+  ScriptApp.newTrigger('checkForNewFiles')
+    .timeBased()
+    .everyMinutes(5) // You can change the time interval
+    .create();
+}
